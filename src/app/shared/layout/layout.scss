@@ -1,29 +1,44 @@
+/* layout.component.scss */
 .layout-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   height: 100vh;
-}
 
-.layout-body {
-  display: flex;
-  flex: 1;
-  overflow: hidden;
+  /* 2 colonnes : 250px pour la sidebar, le reste pour le contenu */
+  grid-template-columns: 250px 1fr;
+
+  /* 3 lignes : header, contenu principal, footer */
+  grid-template-rows: auto 1fr auto;
+
+  /* on nomme les zones pour plus de clarté */
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main"
+    "sidebar footer";
 }
 
 app-sidebar {
-  width: 250px;
+  grid-area: sidebar;
   background-color: #1f2937;
-  color: white;
+  color: #fff;
+  /* full height = déjà géré par la grille */
+}
+
+app-header {
+  grid-area: header;
+  background-color: #374151;
+  color: #fff;
+  padding: 1rem;
 }
 
 .layout-main {
-  flex: 1;
-  padding: 2rem;
+  grid-area: main;
   overflow-y: auto;
+  padding: 2rem;
   background-color: #f9fafb;
 }
 
 app-footer {
+  grid-area: footer;
   background-color: #111827;
   color: #fff;
   text-align: center;
