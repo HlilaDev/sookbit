@@ -8,7 +8,7 @@ export const routes: Routes = [
       import('./shared/layout/layout').then(m => m.Layout),
     children: [
       {
-        path: 'dashboard',
+        path: '',
         loadChildren: () =>
           import('./features/dashboard/dashboard-module')
             .then(m => m.DashboardModule)
