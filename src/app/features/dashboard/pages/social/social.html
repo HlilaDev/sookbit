@@ -1,0 +1,32 @@
+<div class="container py-5">
+  <h2 class="mb-4 text-center">Buy & Sell Social Media Accounts</h2>
+  <p class="text-muted text-center mb-5">
+    Explore high-quality Facebook, TikTok, Instagram, and YouTube accounts. Verified sellers, fast delivery via Telegram.
+  </p>
+
+  <div class="row g-4">
+    <!-- Example Account Card -->
+    <div class="col-md-6 col-lg-4" *ngFor="let account of socialAccounts">
+      <div class="card shadow-sm h-100 border rounded-4">
+        <img [src]="account.image" [alt]="account.platform + ' account'" class="card-img-top rounded-top-4" style="height: 200px; object-fit: cover;">
+
+        <div class="card-body">
+          <h5 class="card-title">{{ account.platform }} Account</h5>
+          <p class="text-muted mb-1">
+            <strong>Followers:</strong> {{ account.followers  }}
+          </p>
+          <p class="text-muted mb-1">
+            <strong>Niche:</strong> {{ account.niche }}
+          </p>
+          <p class="text-muted mb-2">
+            <strong>Engagement:</strong> {{ account.engagement }}
+          </p>
+          <h5 class="text-primary mb-3">${{ account.price }}</h5>
+          <a [href]="account.telegram" target="_blank" class="btn btn-success w-100">
+            Buy via Telegram
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
