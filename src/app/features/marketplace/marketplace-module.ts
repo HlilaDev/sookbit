@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { LayoutRoutingModule } from './layout-routing-module';
+import { MarketplaceRoutingModule } from './marketplace-routing-module';
 
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    LayoutRoutingModule
+    MarketplaceRoutingModule
   ]
 })
-export class LayoutModule { }
+export class MarketplaceModule { }

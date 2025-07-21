@@ -1,0 +1,22 @@
+.payment-banner {
+  background-color: #ebe8e8;
+  padding: 15px 0;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.payment-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;  /* Distribute items evenly */
+  gap: 20px;
+}
+
+.payment-icon {
+  width: 50%;  /* Set the width to 100% */
+  height: auto; /* Maintain the aspect ratio */
+  max-width: 150px; /* Max width to prevent the icons from becoming too large */
+}

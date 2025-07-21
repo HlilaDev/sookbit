@@ -13,6 +13,7 @@
   grid-template-areas:
     "sidebar header"
     "sidebar main"
+  
     "sidebar footer";
 }
 
@@ -36,6 +37,8 @@ app-header {
   padding: 2rem;
   background-color: #f9fafb;
 }
+
+
 
 app-footer {
   grid-area: footer;

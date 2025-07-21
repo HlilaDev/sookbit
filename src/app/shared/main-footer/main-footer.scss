@@ -1,0 +1,57 @@
+/* Style général du footer */
+footer {
+  background-color: #333;  /* Fond sombre */
+  color: white;  /* Texte blanc */
+  padding: 20px 0;  /* Espacement vertical */
+}
+
+/* Conteneur qui permet de centrer et de gérer la disposition */
+footer .container {
+  display: flex;
+  flex-direction: column;  /* Par défaut, les éléments sont disposés en colonne */
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;  /* Centre le texte */
+}
+
+/* Sur écrans moyens et plus grands, ajuster la disposition pour une ligne */
+@media (min-width: 768px) {
+  footer .container {
+    flex-direction: row;  /* Sur les grands écrans, les éléments seront en ligne */
+    text-align: left;  /* Aligne le texte à gauche sur grands écrans */
+  }
+}
+
+/* Espace entre les éléments dans le footer */
+footer .container > div {
+  margin-top: 10px;
+}
+
+footer small {
+  font-size: 14px;
+  color: #aaa;  /* Couleur gris clair pour le texte */
+}
+
+footer a {
+  color: white;  /* Lien blanc */
+  text-decoration: none;  /* Retirer le soulignement des liens */
+  margin: 0 10px;  /* Espacement horizontal entre les liens */
+}
+
+footer a:hover {
+  color: #f44336;  /* Changer la couleur au survol (couleur rouge) */
+}
+
+footer i {
+  font-size: 20px;  /* Taille de l'icône */
+}
+
+/* Marges supplémentaires pour espacer le contenu sur petits écrans */
+footer .mt-2 {
+  margin-top: 1rem;
+}
+
+/* Style de l'icône sur les petits écrans */
+footer i.fab {
+  margin-right: 10px;
+}

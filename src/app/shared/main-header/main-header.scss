@@ -1,0 +1,103 @@
+/* Style général du header */
+.main-header {
+  display: flex;
+  justify-content: space-between;  /* Espacement entre les éléments du header */
+  align-items: center;  /* Aligne verticalement les éléments */
+  background-color: #333;  /* Fond sombre */
+  padding: 20px;
+  color: white;  /* Couleur du texte */
+}
+
+/* Logo */
+.main-header .logo img {
+  height: 35px;  /* Hauteur du logo */
+  width: auto;  /* Garde les proportions du logo */
+}
+
+/* Navigation - Menu */
+.nav-menu {
+  display: flex;  /* Utilisation de flexbox pour aligner les éléments en ligne */
+  gap: 20px;  /* Espacement entre les éléments du menu */
+}
+
+.nav-menu a {
+  color: white;  /* Couleur du texte des liens */
+  text-decoration: none;  /* Retirer le soulignement des liens */
+  font-size: 16px;  /* Taille de la police */
+}
+
+.nav-menu a:hover {
+  color: #f44336;  /* Changer la couleur au survol */
+}
+
+/* Barre de recherche */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-bar input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 200px;  /* Largeur fixe de la barre de recherche */
+}
+
+.search-bar button {
+  background-color: #f44336;  /* Couleur du bouton */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.search-bar button:hover {
+  background-color: #e53935;  /* Couleur au survol */
+}
+
+/* Actions utilisateur (langue, panier, notifications, profil) */
+.user-actions {
+  display: flex;
+  gap: 15px;  /* Espacement entre les boutons */
+}
+
+.user-actions button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.user-actions button:hover {
+  color: #f44336;  /* Couleur au survol */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;  /* Passage à une disposition en colonne sur les petits écrans */
+    align-items: flex-start;  /* Aligner les éléments au début */
+    padding: 10px;
+  }
+
+  .nav-menu {
+    flex-direction: column;  /* Le menu passe en colonne */
+    gap: 10px;
+  }
+
+  .search-bar {
+    width: 100%;  /* La barre de recherche occupe toute la largeur disponible */
+    margin-top: 10px;
+  }
+
+  .user-actions {
+    margin-top: 10px;
+    flex-direction: column;  /* Les actions utilisateur passent en colonne */
+    gap: 10px;
+  }
+}

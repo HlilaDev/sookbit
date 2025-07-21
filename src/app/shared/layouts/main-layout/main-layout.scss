@@ -1,0 +1,12 @@
+/* Layout principal */
+.layout-main {
+  min-height: 100vh;  /* Assurez-vous que l'élément principal prend toute la hauteur de la fenêtre */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Le contenu du router-outlet doit prendre l'espace restant */
+.layout-main > router-outlet {
+  flex-grow: 1; /* Le contenu dynamique du router-outlet occupe tout l'espace restant */
+}
+

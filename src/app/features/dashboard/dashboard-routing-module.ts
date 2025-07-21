@@ -8,6 +8,7 @@ import { Apps } from './pages/apps/apps';
 import { Netflix } from './pages/apps/netflix/netflix';
 import { Spotify } from './pages/apps/spotify/spotify';
 import { Social } from './pages/social/social';
+import { Iptv } from './pages/iptv/iptv';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
     {path:'capcut' , component:Capcut , title:'capcut'},
     {path:'apps/netflix' , component:Netflix , title:'netflix'},
     {path:'apps/spotify' , component:Spotify , title:'spotify'},
+    {path:'iptv' , component:Iptv , title:'iptv'},
     {path:'apps' , component:Apps , title:'soft-apps'},
         {path:'social' , component:Social , title:'social'}
 
