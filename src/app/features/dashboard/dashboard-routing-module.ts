@@ -1,26 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { Homepage } from './pages/homepage/homepage';
-import { AboutUs } from './pages/about-us/about-us';
-import { Canva } from './pages/apps/canva/canva';
-import { Capcut } from './pages/apps/capcut/capcut';
-import { Apps } from './pages/apps/apps';
-import { Netflix } from './pages/apps/netflix/netflix';
-import { Spotify } from './pages/apps/spotify/spotify';
-import { Social } from './pages/social/social';
-import { Iptv } from './pages/iptv/iptv';
+
 
 
 const routes: Routes = [
     {path:'' ,component:Homepage , title:'home'},
-    {path:'about-us' , component:AboutUs , title:'about-us'},
-    {path:'canva' , component:Canva , title:'canva'},
-    {path:'capcut' , component:Capcut , title:'capcut'},
-    {path:'apps/netflix' , component:Netflix , title:'netflix'},
-    {path:'apps/spotify' , component:Spotify , title:'spotify'},
-    {path:'iptv' , component:Iptv , title:'iptv'},
-    {path:'apps' , component:Apps , title:'soft-apps'},
-        {path:'social' , component:Social , title:'social'}
+    {path:'categories' ,loadChildren:()=>import('../dashboard/pages/categories/categories-module').then(m=>m.CategoriesModule), title:'categories'},
+    {path:'subcategories' ,loadChildren:()=>import('../dashboard/pages/subcategories/subcategories-module').then(m=>m.SubcategoriesModule), title:'subcategories'},
+    {path:'products' ,loadChildren:()=>import('../dashboard/pages/products/products-module').then(m=>m.ProductsModule), title:'products'},
+    {path:'offers' ,loadChildren:()=>import('../dashboard/pages/offers/offers-module').then(m=>m.OffersModule), title:'offers'},
+    {path:'users' ,loadChildren:()=>import('../dashboard/pages/users/users-module').then(m=>m.UsersModule), title:'users'},
+    {path:'sellers' ,loadChildren:()=>import('../dashboard/pages/sellers/sellers-module').then(m=>m.SellersModule), title:'sellers'},
+    {path:'orders' ,loadChildren:()=>import('../dashboard/pages/orders/orders-module').then(m=>m.OrdersModule), title:'orders'},
+    {path:'settings' ,loadChildren:()=>import('../dashboard/pages/settings/settings-module').then(m=>m.SettingsModule), title:'settings'},
 
 
 ];

@@ -1,0 +1,63 @@
+
+/* Logo */
+.logo {
+  max-height: 40px; /* Réduire la hauteur maximale du logo */
+  width: auto; /* Maintenir la proportion du logo */
+}
+/* Notifications et Messages section */
+.navbar .btn-link {
+  position: relative;
+  color: white;
+  font-size: 1rem; /* Taille des icônes */
+  padding-right: 30px; /* Ajouter un padding droit pour l'espace */
+  margin-left: 15px; /* Marge gauche entre les éléments */
+}
+
+/* Positionnement des badges plus proches des icônes */
+.navbar .btn-link .badge {
+  position: absolute;
+  top: 2; /* Positionner légèrement au-dessus de l'icône */
+  right: 2; /* Positionner légèrement à droite */
+  font-size: 0.7rem;
+  border-radius: 50%;
+}
+
+/* Badge rouge pour les notifications */
+.badge-danger {
+  background-color: #f44336; /* Rouge pour les notifications */
+}
+
+/* Badge bleu pour les messages */
+.badge-primary {
+  background-color: #007bff; /* Bleu pour les messages */
+}
+
+/* Profil circulaire */
+.profile-circle {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.profile-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Espacement entre les éléments à droite */
+.navbar .d-flex {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .ml-auto {
+  margin-left: auto; /* Pousse les éléments à droite */
+}
+
+/* Espacement ajusté entre les icônes */
+.navbar .d-flex .btn-link + .btn-link, .navbar .d-flex .profile-circle {
+  margin-left: 15px; /* Réduire l'espacement */
+}

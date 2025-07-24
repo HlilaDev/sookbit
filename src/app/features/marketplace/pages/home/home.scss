@@ -1,0 +1,14 @@
+.content {
+  display: flex;  /* Utilisation de Flexbox */
+  flex-direction: column;  /* Organiser les éléments en colonne */
+  min-height: 100vh;  /* Assurez-vous que la section prend toute la hauteur de la fenêtre */
+  background-color: rgb(255, 127, 127);  /* Fond rouge pour tester */
+  padding: 20px;  /* Espacement autour des éléments */
+  box-sizing: border-box;
+}
+
+/* Le Hero et les éléments doivent être espacés et prendre l'espace */
+app-hero, app-payments-banner {
+  flex-grow: 1;  /* Chaque composant prend l'espace restant */
+  margin-bottom: 20px;  /* Ajout d'une petite marge entre les composants */
+}

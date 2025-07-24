@@ -1,0 +1,9 @@
+<div class="carousel-inner">
+  <h1>tending games</h1>
+  <!-- Loop through trendingGames array and create a card for each game -->
+  <div class="carousel-item" *ngFor="let game of trendingGames">
+
+    <app-trending-card [card]="game" ></app-trending-card>
+    
+  </div>
+</div>

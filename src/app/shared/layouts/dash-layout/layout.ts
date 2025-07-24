@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { Footer } from "../../dash-footer/footer";
 import { Sidebar } from "../../sidebar/sidebar";
-import { Header } from "../../hash-header/header";
+import { Header } from "../../dash-header/header";
 import { DashboardRoutingModule } from "../../../features/dashboard/dashboard-routing-module";
 
 @Component({
   selector: 'app-layout',
-  imports: [Footer, Sidebar, Header, DashboardRoutingModule],
+  imports: [ Sidebar, Header, DashboardRoutingModule],
   templateUrl: './layout.html',
   styleUrl: './layout.scss'
 })

@@ -1,11 +1,16 @@
-<!-- main-header.component.html -->
 <header class="main-header">
   <!-- Logo -->
   <div class="logo">
     <img src="assets/images/logo.png" alt="Sookbit" />
   </div>
 
- 
+  <!-- Menu Icon and Categories -->
+  <div class="menu-categories">
+    <button class="menu-icon">
+      <i class="fas fa-bars"></i>  <!-- Icône de menu (hamburger) -->
+    </button>
+    <span class="categories-text">Categories</span>  <!-- Texte "Categories" -->
+  </div>
 
   <!-- Search Bar -->
   <div class="search-bar">
@@ -13,11 +18,30 @@
     <button type="submit">Search</button>
   </div>
 
-  <!-- User Actions -->
+  <!-- User Actions (with Profile, Notification, and Message Icons) -->
   <div class="user-actions">
-    <button class="lang-selector">EN</button>
-    <button class="cart">Cart</button>
-    <button class="notifications">Notifications</button>
-    <button class="profile">Profile</button>
+    <!-- Become Seller Button -->
+    <button class="become-seller">
+      Become Seller
+    </button>
+
+    <!-- Message Icon with Badge -->
+    <button class="message-icon">
+      <i class="fas fa-envelope"></i>
+      <span class="badge badge-messages">2</span>  <!-- Badge for Messages -->
+    </button>
+
+    <!-- Notification Icon with Badge -->
+    <button class="notification-icon">
+      <i class="fas fa-bell"></i>
+      <span class="badge badge-notifications">5</span>  <!-- Badge for Notifications -->
+    </button>
+
+    <!-- Profile Image with Badge -->
+    <button class="profile-icon">
+      <div class="profile-circle">
+        <img src="assets/images/admin.png" alt="Profile" />
+      </div>
+    </button>
   </div>
 </header>

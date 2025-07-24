@@ -1,0 +1,40 @@
+<div class="container">
+
+     <button class="add-category-btn" (click)="addCategory()">Add Category</button>
+  <h2>All Categories</h2>
+  
+  <!-- Check if categories are loaded using @if -->
+  @if (allCats.length > 0) {
+    <table>
+      <thead>
+        <tr>
+          <th>Category Name</th>
+          <th>Slug</th>
+          <th>Description</th>
+          <th>Created At</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Use @for instead of *ngFor -->
+        @for (category of allCats; track category._id) {
+          <tr>
+            <td>{{ category.name }}</td>
+            <td>{{ category.slug }}</td>
+            <td>{{ category.description }}</td>
+            <td>{{ category.createdAt | date:'short' }}</td>
+            <td>
+              <button (click)="editCategory(category._id)" class="edit-btn">Edit</button>
+              <button (click)="deleteCategory(category._id)" class="delete-btn">Delete</button>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  } @else {
+    <!-- No need for ng-template, just use @else block -->
+    <div class="no-data">
+      <p>No categories available.</p>
+    </div>
+  }
+</div>

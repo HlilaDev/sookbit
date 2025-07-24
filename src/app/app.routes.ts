@@ -1,8 +1,14 @@
 import { Routes } from '@angular/router';
 import { MainLayout } from './shared/layouts/main-layout/main-layout';
+import { Login } from './features/marketplace/pages/auth/login/login';
 
 export const routes: Routes = [
   // Route pour le marketplace avec le MainLayout
+
+  {
+    path:'login' ,
+    component:Login
+  },
   {
     path: '',
     component:MainLayout,

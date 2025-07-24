@@ -1,0 +1,121 @@
+<div class="edit-category-container">
+  <div class="form-card">
+    <div class="form-header">
+      <h2>Edit Category</h2>
+      <button type="button" class="close-btn" (click)="onCancel()">✕</button>
+    </div>
+
+    <!-- Loading State -->
+    @if (isLoading) {
+      <div class="loading-spinner">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+      </div>
+    } @else {
+      <!-- Success Message -->
+      @if (successMessage) {
+        <div class="alert alert-success">
+          <span class="alert-icon">✓</span>
+          {{ successMessage }}
+        </div>
+      }
+
+      <!-- Error Message -->
+      @if (errorMessage) {
+        <div class="alert alert-error">
+          <span class="alert-icon">⚠</span>
+          {{ errorMessage }}
+        </div>
+      }
+
+      <!-- Edit Form -->
+      <form [formGroup]="editCategoryForm" (ngSubmit)="onSubmit()" class="category-form">
+        <!-- Category Name -->
+        <div class="form-group">
+          <label for="name" class="form-label">
+            Category Name <span class="required">*</span>
+          </label>
+          <input
+            type="text"
+            id="name"
+            formControlName="name"
+            (input)="onNameChange()"
+            class="form-input"
+            [class.error]="isFieldInvalid('name')"
+            placeholder="Enter category name"
+            maxlength="50"
+          />
+          @if (isFieldInvalid('name')) {
+            <span class="error-message">{{ getFieldError('name') }}</span>
+          }
+        </div>
+
+        <!-- Category Slug -->
+        <div class="form-group">
+          <label for="slug" class="form-label">
+            Slug <span class="required">*</span>
+            <small class="help-text">(URL-friendly version of the name)</small>
+          </label>
+          <input
+            type="text"
+            id="slug"
+            formControlName="slug"
+            class="form-input"
+            [class.error]="isFieldInvalid('slug')"
+            placeholder="category-slug"
+            maxlength="50"
+          />
+          @if (isFieldInvalid('slug')) {
+            <span class="error-message">{{ getFieldError('slug') }}</span>
+          }
+        </div>
+
+        <!-- Category Description -->
+        <div class="form-group">
+          <label for="description" class="form-label">
+            Description <span class="optional">(optional)</span>
+          </label>
+          <textarea
+            id="description"
+            formControlName="description"
+            class="form-textarea"
+            [class.error]="isFieldInvalid('description')"
+            placeholder="Enter category description"
+            rows="4"
+            maxlength="500"
+          ></textarea>
+          @if (isFieldInvalid('description')) {
+            <span class="error-message">{{ getFieldError('description') }}</span>
+          }
+          <div class="char-counter">
+            {{ editCategoryForm.get('description')?.value?.length || 0 }}/500
+          </div>
+        </div>
+
+        <!-- Form Actions -->
+        <div class="form-actions">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            (click)="onCancel()"
+            [disabled]="isLoading"
+          >
+            Cancel
+          </button>
+          <button
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="editCategoryForm.invalid || isLoading"
+          >
+            @if (isLoading) {
+              <span class="btn-spinner"></span>
+              Updating...
+            } @else {
+              Update Category
+            }
+          </button>
+        </div>
+      </form>
+    }
+  </div>
+</div>

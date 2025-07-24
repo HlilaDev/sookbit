@@ -1,0 +1,14 @@
+<div class="trending-card">
+  <div class="card-image">
+    <img [src]="card?.image" alt="{{ card?.name }}" class="card-img">
+  </div>
+  
+  <div class="card-info">
+    <h5 class="card-title">{{ card?.name }}</h5>
+    <p class="card-text">{{ card?.offers }} offers</p>
+  </div>
+  
+  <div class="offer-badge">
+    <span>{{ card?.offers }} offers</span>
+  </div>
+</div>
